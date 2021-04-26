@@ -28,7 +28,7 @@ def simple(A, B):
        ret = (1-np.sum(np.square(temp))/4)*100
        return ret
 
-def compare(model_path, image_path1, image_path2):
+def compare(model_path, image_path, num_a, num_b):
     BACKBONE = IR_101([112,112])
     BACKBONE_RESUME_ROOT = model_path
     if BACKBONE_RESUME_ROOT:
@@ -42,21 +42,22 @@ def compare(model_path, image_path1, image_path2):
         print("=" * 60)
     import time
     BACKBONE.cuda()
-    image1 = v1.extract_feature(image_path1,BACKBONE,model_path)
-    image2 = v1.extract_feature(image_path2,BACKBONE,model_path)
-    return simple(image1[0],image2[0])
+    image = v1.extract_feature(image_path,BACKBONE,model_path)
+    return simple(image[num_a],image[num_b])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = "compare images")
-    parser.add_argument("-image1_root", "--image1_root", help = "specify your source dir", default = "", type = str)
-    parser.add_argument("-image2_root", "--image2_root", help = "specify your source dir", default = "", type = str)
-    parser.add_argument("-model_root", "--model_root", help = "specify your model path", default = "", type = str)
+    parser.add_argument("-image_root", "--image_root", help = "specify your source dir", default = "your/image/file/path", type = str)
+    parser.add_argument("-num_a", "--num_a", help = "specify your image number in file", default = 0, type = int)
+    parser.add_argument("-num_b", "--num_b", help = "specify your image number in file", default = 1, type = int)
+    parser.add_argument("-model_root", "--model_root", help = "specify your model path", default = "your/model/file/path", type = str)
     args = parser.parse_args()
 
-    image1_root = args.image1_root
-    image2_root = args.image2_root
-    model_root = args.model_root 
-    
-    res = compare(model_root, image1_root, image2_root)
+    image_root = args.image_root
+    num_a = args.num_a
+    num_b = args.num_b
+    model_root = args.model_root
+
+    res = compare(model_root, image_root, num_a, num_b)
     print("image similarity {}%".format(res))
 
