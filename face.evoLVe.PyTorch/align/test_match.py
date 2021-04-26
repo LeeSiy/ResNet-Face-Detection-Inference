@@ -48,9 +48,9 @@ def compare(model_path, image_path1, image_path2):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = "compare images")
-    parser.add_argument("-image1_root", "--image1_root", help = "specify your source dir", default = "/home/sylee/Face/test/detected/test_mask/test", type = str)
-    parser.add_argument("-image2_root", "--image2_root", help = "specify your source dir", default = "/home/sylee/Face/test/detected/test_mask/test", type = str)
-    parser.add_argument("-model_root", "--model_root", help = "specify your model path", default = "/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth", type = str)
+    parser.add_argument("-image1_root", "--image1_root", help = "specify your source dir", default = "", type = str)
+    parser.add_argument("-image2_root", "--image2_root", help = "specify your source dir", default = "", type = str)
+    parser.add_argument("-model_root", "--model_root", help = "specify your model path", default = "", type = str)
     args = parser.parse_args()
 
     image1_root = args.image1_root
