@@ -1,6 +1,5 @@
 from backbone.model_resnet import ResNet_50, ResNet_101, ResNet_152
 from backbone.model_irse import IR_50, IR_101, IR_152, IR_SE_50, IR_SE_101, IR_SE_152
-#from backbone.model_mobilefacenet import MobileFaceNet
 import torch.nn.functional as F
 import torch
 from PIL import Image
@@ -28,12 +27,6 @@ def simple(A, B):
        temp =  np.subtract(A,B)
        ret = (1-np.sum(np.square(temp))/4)*100
        return ret  
-class TempModel(nn.Module):
-    def __init__(self):
-        super(TempModel, self).__init__()
-        self.conv1 = nn.Conv2d(3, 5, (3, 3))
-    def forward(self, inp):
-        return self.conv1(inp)
 
 model_path = '~/Face/CurricularFace/CurricularFace_Backbone.pth'
 
@@ -42,24 +35,6 @@ img_path_biden = '~/Face/test/detected/biden_mask/biden'
 img_path_elon = '~/Face/test/detected/elon_mask/elon'
 img_path_hugh = '~/Face/test/detected/hugh_mask/hugh'
 img_path_test = '~/Face/test/detected/test_mask/test'
-
-#-------------------------------------------------------------------------
-'''
-img_biden = Image.open('~/Face/test/mask/test_mask/test/biden.jpg')
-bounding_boxes, landmarks = detect_faces(img_biden) 
-img_biden = show_results(img_biden, bounding_boxes, landmarks)  
-img_biden = np.array(img_biden)
-cv2.imwrite('./result/result_mask_biden.png',img_biden)
-
-model_path = '~/Face/CurricularFace/CurricularFace_Backbone.pth'
-img_trump = Image.open('~/Face/test/mask/test_mask/test/trump.jpg')
-bounding_boxes2, landmarks2 = detect_faces(img_trump)
-img_trump = show_results(img_trump, bounding_boxes2, landmarks2)
-img_trump = np.array(img_trump)
-cv2.imwrite('./result/result_mask_trump.png',img_trump)
-'''
-#--------------------------------------------------------------------------
-
 
 #--------------------------------------------------------------------------
 BACKBONE = IR_101([112,112])
