@@ -35,25 +35,24 @@ class TempModel(nn.Module):
     def forward(self, inp):
         return self.conv1(inp)
 
-#model_path = '/home/sylee/Face/backbone_ir50_asia.pth'
-model_path = '/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth'
+model_path = '~/Face/CurricularFace/CurricularFace_Backbone.pth'
 
-img_path_trump = '/home/sylee/Face/test/detected/trump_mask/trump'
-img_path_biden = '/home/sylee/Face/test/detected/biden_mask/biden'
-img_path_elon = '/home/sylee/Face/test/detected/elon_mask/elon'
-img_path_hugh = '/home/sylee/Face/test/detected/hugh_mask/hugh'
-img_path_test = '/home/sylee/Face/test/detected/test_mask/test'
+img_path_trump = '~/Face/test/detected/trump_mask/trump'
+img_path_biden = '~/Face/test/detected/biden_mask/biden'
+img_path_elon = '~/Face/test/detected/elon_mask/elon'
+img_path_hugh = '~/Face/test/detected/hugh_mask/hugh'
+img_path_test = '~/Face/test/detected/test_mask/test'
 
 #-------------------------------------------------------------------------
 '''
-img_biden = Image.open('/home/sylee/Face/test/mask/test_mask/test/biden.jpg')
+img_biden = Image.open('~/Face/test/mask/test_mask/test/biden.jpg')
 bounding_boxes, landmarks = detect_faces(img_biden) 
 img_biden = show_results(img_biden, bounding_boxes, landmarks)  
 img_biden = np.array(img_biden)
 cv2.imwrite('./result/result_mask_biden.png',img_biden)
 
-model_path = '/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth'
-img_trump = Image.open('/home/sylee/Face/test/mask/test_mask/test/trump.jpg')
+model_path = '~/Face/CurricularFace/CurricularFace_Backbone.pth'
+img_trump = Image.open('~/Face/test/mask/test_mask/test/trump.jpg')
 bounding_boxes2, landmarks2 = detect_faces(img_trump)
 img_trump = show_results(img_trump, bounding_boxes2, landmarks2)
 img_trump = np.array(img_trump)
@@ -64,7 +63,7 @@ cv2.imwrite('./result/result_mask_trump.png',img_trump)
 
 #--------------------------------------------------------------------------
 BACKBONE = IR_101([112,112])
-BACKBONE_RESUME_ROOT = '/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth'
+BACKBONE_RESUME_ROOT = '~/Face/CurricularFace/CurricularFace_Backbone.pth'
 if BACKBONE_RESUME_ROOT:
     print("=" * 60)
     if os.path.isfile(BACKBONE_RESUME_ROOT):
