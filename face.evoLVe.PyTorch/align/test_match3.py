@@ -30,11 +30,11 @@ mask_thresh = 1.0
 count = 1
 gpuid = 0
 model1_init = time.time()
-detector = RetinaFace('/home/sylee/Face/face.evoLVe.PyTorch/detect/retinaface-R50/R50', 0, gpuid, 'net3')
+detector = RetinaFace('your/path/retinaface-R50/R50', 0, gpuid, 'net3')
 print("Time for loading RetinaFace: {}", time.time() - model1_init)
 BACKBONE = IR_101([112,112])
 model2_init = time.time()
-BACKBONE_RESUME_ROOT = "/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth" 
+BACKBONE_RESUME_ROOT = 'yout/path/CurricularFace_Backbone.pth' 
 if BACKBONE_RESUME_ROOT:
     print("=" * 60)
     if os.path.isfile(BACKBONE_RESUME_ROOT):
@@ -162,8 +162,8 @@ def group(img1,img2):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = "compare images")
-    parser.add_argument("-point1_image_root", "--point1_image_root", help = "specify your source dir", default = "/home/sylee/Face/test/detected/trump_mask/trump/trump", type = str)
-    parser.add_argument("-point2_image_root", "--point2_image_root", help = "specify your source dir", default = "/home/sylee/Face/test/detected/trump_mask/trump/trump", type = str)
+    parser.add_argument("-point1_image_root", "--point1_image_root", help = "specify your source dir", default = "", type = str)
+    parser.add_argument("-point2_image_root", "--point2_image_root", help = "specify your source dir", default = "", type = str)
     parser.add_argument("-num_point1", "--num_point1", help = "specify your image number in file", default = 0, type = int)
     parser.add_argument("-num_point2", "--num_point2", help = "specify your image number in file", default = 1, type = int)
     args = parser.parse_args()
@@ -173,8 +173,8 @@ if __name__ == '__main__':
     num_point1 = args.num_point1
     num_point2 = args.num_point2
 
-    group, group_box = detect("/home/sylee/Face/test/biden_with_group/test8.jpg")
-    person, person_box = detect("/home/sylee/Face/test/mask/biden_mask/biden/biden_mask1.jpg")
+    group, group_box = detect("")
+    person, person_box = detect("")
     group_res = get_feature(BACKBONE_RESUME_ROOT, group)
     person_res = get_feature(BACKBONE_RESUME_ROOT, person)
     num = single_match(group_res,person_res)
