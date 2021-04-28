@@ -11,6 +11,7 @@ Inference code for face detection
 - using detecting code from insightface
 ![1](https://user-images.githubusercontent.com/62841284/116346345-0a009a00-a825-11eb-9350-d661d8c37ad2.png)
 ![2](https://user-images.githubusercontent.com/62841284/116346351-0c62f400-a825-11eb-8c5a-ad01edb0fc16.png)
+
 - use cv2.putText(group_box, 'Makron', (x1_box_list[num], y1_box_list[num]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2) for labeling
 ![3](https://user-images.githubusercontent.com/62841284/116355011-353eb580-a834-11eb-945f-1b4951098818.png)
 
