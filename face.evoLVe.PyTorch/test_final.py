@@ -90,9 +90,9 @@ gpuid = 0
 image_path=""
 
 # global value for model loading-------------------------------
-detector = RetinaFace('/home/sylee/Face/face.evoLVe.PyTorch/detect/retinaface-R50/R50', 0, gpuid, 'net3')
+detector = RetinaFace('your/path/to/retinaface-R50/R50', 0, gpuid, 'net3')
 BACKBONE = IR_101([112,112])
-BACKBONE_RESUME_ROOT = "/home/sylee/Face/CurricularFace/CurricularFace_Backbone.pth" 
+BACKBONE_RESUME_ROOT = 'your/path/to/CurricularFace_Backbone.pth' 
 
 if BACKBONE_RESUME_ROOT:
     print("=" * 60)
@@ -346,7 +346,7 @@ if __name__ == '__main__':
     point2_image_root = args.point2_image_root
     num_point1 = args.num_point1
     num_point2 = args.num_point2
-    person_img = detect_stack("/home/sylee/Face/test_mask_group.jpg")
+    person_img = detect_stack("yout/path/to/jpg")
     standard = get_feature_stack(person_img)
     #cv2.imshow('person1',person_img[0])
     #cv2.imshow('person2',person_img[1])
@@ -361,7 +361,7 @@ if __name__ == '__main__':
     batch_que = Queue(np.zeros((1,112,112,3)))
     feature_que = Queue(np.zeros((0,0)))    
 
-    path_que = Queue("/home/sylee/Face/mask.mp4")
+    path_que = Queue("your/path/to/video")
     video_thread = threading.Thread(target=snap_video,name='video')
     detecting_thread = threading.Thread(target=detect,name='detection')
     extracting_thread = threading.Thread(target=get_feature,name='extraction')
