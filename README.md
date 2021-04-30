@@ -9,7 +9,7 @@ Inference code for face detection
 # Inference Code file address
 - /face.evoLVe.PyTorch/test_final.py
 
-- video example inference code with threads
+- video example inference code with threads (example screen shot images are from https://www.pexels.com/)
   - detecting thread 
   - classifying thread
   - reading video thread
