@@ -4,7 +4,7 @@ Inference code for face detection
 # Reference
 - 1. https://github.com/HuangYG123/CurricularFace
 - 2. https://github.com/ZhaoJ9014/face.evoLVe.PyTorch
-- 3. from https://github.com/deepinsight/insightface
+- 3. https://github.com/deepinsight/insightface
 
 # Inference Code file address
 - /face.evoLVe.PyTorch/align/test_match3.py
