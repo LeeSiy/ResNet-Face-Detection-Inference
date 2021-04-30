@@ -7,7 +7,7 @@ Inference code for face detection
 - 3. https://github.com/deepinsight/insightface
 
 # Inference Code file address
-- /face.evoLVe.PyTorch/align/test_final.py
+- /face.evoLVe.PyTorch/test_final.py
 
 - video example inference code with threads
   - detecting thread 
