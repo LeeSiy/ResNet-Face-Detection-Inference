@@ -6,6 +6,14 @@ Inference code for face detection
 - 2. https://github.com/ZhaoJ9014/face.evoLVe.PyTorch
 - 3. https://github.com/deepinsight/insightface
 
+# Export library
+- export PYTHONPATH=~/Face/face.evoLVe.PyTorch/util/:$PYTHONPATH
+- export PYTHONPATH=~/Face/face.evoLVe.PyTorch/:$PYTHONPATH
+- export PYTHONPATH=~/Face/insightface/:$PYTHONPATH
+- export PYTHONPATH=~/Face/insightface/detection/:$PYTHONPATH
+- sudo apt-get install google-perftools
+- export LD_PRELOAD="/usr/lib/libtcmalloc_minimal.so.4"
+
 # Inference Code file address
 - /face.evoLVe.PyTorch/test_final.py
 
