@@ -8,6 +8,14 @@ Inference code for face detection
 
 # Inference Code file address
 - /face.evoLVe.PyTorch/align/test_match3.py
+
+- video example inference code with threads
+-- detecting thread 
+-- classifying thread
+-- reading video thread
+-- extracting feature thread
+- ![Screenshot from 2021-04-29 13-36-14](https://user-images.githubusercontent.com/62841284/116641059-ec5b3e00-a9a6-11eb-8c40-352e0807049c.png)
+
 - using detecting code from insightface
 - ![1](https://user-images.githubusercontent.com/62841284/116346345-0a009a00-a825-11eb-9350-d661d8c37ad2.png)
 - ![2](https://user-images.githubusercontent.com/62841284/116346351-0c62f400-a825-11eb-8c5a-ad01edb0fc16.png)
