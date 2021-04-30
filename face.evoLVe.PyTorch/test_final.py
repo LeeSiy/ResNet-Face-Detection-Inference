@@ -299,8 +299,18 @@ def group():
                 frame_const = cv2.putText(frame_const, "person{}".format(num+1), (x1_box_list[i], y1_box_list[i]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
 
         frame_const = cv2.resize(frame_const, (512, 1024), interpolation = cv2.INTER_CUBIC)
+        cv2.imshow('person1',person_img[0])
+        cv2.imshow('person2',person_img[1])
+        cv2.imshow('person3',person_img[2])
+        cv2.imshow('person4',person_img[3])
         cv2.imshow('result',frame_const)
-        cv2.waitKey(1)
+        key = cv2.waitKey(1)
+        if key == 27:
+            signal_que.enQueue('finish')
+            signal_que.deQueue()
+            print("end comparing!!!")
+            evt_snap.set()
+            break
         evt_compare.clear()
         evt_snap.set()
 
@@ -348,11 +358,7 @@ if __name__ == '__main__':
     num_point2 = args.num_point2
     person_img = detect_stack("yout/path/to/jpg")
     standard = get_feature_stack(person_img)
-    #cv2.imshow('person1',person_img[0])
-    #cv2.imshow('person2',person_img[1])
-    #cv2.imshow('person3',person_img[2])
-    #cv2.imshow('person4',person_img[3])
-    
+        
     image_que = Queue(np.zeros((112,112,3)))
     signal_que = Queue("alive")
     x_box_que = Queue([])
