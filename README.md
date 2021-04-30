@@ -14,7 +14,10 @@ Inference code for face detection
   - classifying thread
   - reading video thread
   - extracting feature thread
-  ![Screenshot from 2021-04-29 13-36-14](https://user-images.githubusercontent.com/62841284/116641059-ec5b3e00-a9a6-11eb-8c40-352e0807049c.png)
+  ![r1](https://user-images.githubusercontent.com/62841284/116641523-d732df00-a9a7-11eb-9e7d-79bf48b5da00.png)
+  -Label list
+  ![r2](https://user-images.githubusercontent.com/62841284/116641538-dbf79300-a9a7-11eb-8624-f83451e9f876.png)
+
 
 - using detecting code from insightface
   ![1](https://user-images.githubusercontent.com/62841284/116346345-0a009a00-a825-11eb-9350-d661d8c37ad2.png)
