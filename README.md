@@ -1,4 +1,4 @@
-# ResNet-Face-Detection-Inference
+# ResNet Face Detection Inference
 Inference code for face detection
 
 # Reference
