@@ -17,12 +17,17 @@ Inference code for face detection
 # Inference Code file address
 - /face.evoLVe.PyTorch/test_video.py
 
-- video example inference code with threads (example screen shot images are from https://www.pexels.com/)
+- video example inference code with threads (example screen shot images are from https://www.pexels.com/
   - detecting thread 
   - classifying thread
   - reading video thread
   - extracting feature thread
   
+  
+  
+  https://user-images.githubusercontent.com/62841284/116835846-33437080-abff-11eb-813f-a337e2ae0851.mp4
+
+
   ![r1](https://user-images.githubusercontent.com/62841284/116641523-d732df00-a9a7-11eb-9e7d-79bf48b5da00.png)
   
   -Label list
