@@ -25,7 +25,8 @@ Inference code for face detection
   
   
   
-  https://user-images.githubusercontent.com/62841284/116835846-33437080-abff-11eb-813f-a337e2ae0851.mp4
+  
+  https://user-images.githubusercontent.com/62841284/116836364-36d7f700-ac01-11eb-9d32-4c033d59b27c.mp4
 
 
   ![r1](https://user-images.githubusercontent.com/62841284/116641523-d732df00-a9a7-11eb-9e7d-79bf48b5da00.png)
