@@ -15,7 +15,7 @@ Inference code for face detection
 - export LD_PRELOAD="/usr/lib/libtcmalloc_minimal.so.4"
 
 # Inference Code file address
-- /face.evoLVe.PyTorch/test_video.py
+- /face.evoLVe.PyTorch/test_final.py
 
 - video example inference code with threads (example screen shot images are from https://www.pexels.com/
   - detecting thread 
